@@ -30,5 +30,6 @@ export class MainComponent implements OnInit{
   selectMovie(movie:any){
     this.selectedMovie = movie;
     console.log("Selected: ",this.selectedMovie)
+    console.log(typeof this.selectedMovie);
   }
 }
