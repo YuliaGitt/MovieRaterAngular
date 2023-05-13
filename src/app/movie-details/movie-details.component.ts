@@ -13,7 +13,8 @@ export class MovieDetailsComponent {
 
   constructor(private apiservice : ApiService){};
 
-  @Input() movie :any ;
+
+  @Input() movie : any;
   @Output() updateMovie = new EventEmitter();
   rateEnterNum = 0 ;
 

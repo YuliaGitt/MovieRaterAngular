@@ -12,7 +12,6 @@ import { ApiService } from '../api.service';
 
 export class MainComponent implements OnInit{
   movies :any  = [];
-  movie :any  = [];
   selectedMovie = null;
   
   
