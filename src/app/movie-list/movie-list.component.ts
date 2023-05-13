@@ -1,5 +1,6 @@
 import { Component , OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { ApiService } from '../api.service';
+import { Movie } from '../models/Movie';
 
 
 @Component({
@@ -11,8 +12,13 @@ import { ApiService } from '../api.service';
 export class MovieListComponent implements OnInit {
   movie : any = [];
 
-  @Input() movies : any = [];
-  @Output() selectMovie = new EventEmitter();
+  @Input() movies : Movie[] = [];
+  @Output() selectMovie = new EventEmitter<Movie>();
+  @Output() editedMovie = new EventEmitter<Movie>();
+  @Output() newMovie = new EventEmitter();
+  @Output() deletedMovie = new EventEmitter<Movie>();
+
+
 
   
 
@@ -20,10 +26,18 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit() { }
 
-  movieClicked(movie:any){
+  movieClicked(movie:Movie){
     this.selectMovie.emit(movie)
   }
-
+  movieEdit(movie:Movie){
+    this.editedMovie.emit(movie)
+  }
+  createMovie(){
+    this.editedMovie.emit()
+  }
+  deleteMovie(movie:Movie){
+    console.log("Deleted : ",movie.title)
+  }
 }
 
 

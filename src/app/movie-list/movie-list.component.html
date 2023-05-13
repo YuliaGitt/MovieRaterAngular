@@ -1,3 +1,9 @@
-<div *ngFor = "let movie of movies" (click)="movieClicked(movie)">
-    <h1>{{movie.title}}</h1>
+<div *ngFor = "let movie of movies"  class="movieTitleSection">
+    <h1 (click)="movieClicked(movie)">
+        {{movie.title}}
+    </h1>
+<div class="iconSection" >
+    <i class="fas fa-edit" (click)="movieEdit(movie)"></i>
+    <i class="fas fa-trash" (click)="deleteMovie(movie)"></i>
+    <button (click)="createMovie()">Add a movie</button>
 </div>

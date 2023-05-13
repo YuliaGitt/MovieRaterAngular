@@ -1,0 +1,31 @@
+.buttonSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iconContainer i {
+    margin-left: 5px;
+    margin: 15px 5px;
+
+}
+
+.fa-trash {
+    color: #a90202;
+    margin: 10px;
+    font-size: large;
+}
+
+.fa-edit {
+    font-size: large;
+}
+
+
+h1 {
+    margin-right: auto;
+}
