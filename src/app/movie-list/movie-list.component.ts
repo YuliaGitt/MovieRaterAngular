@@ -18,10 +18,6 @@ export class MovieListComponent implements OnInit {
   @Output() newMovie = new EventEmitter();
   @Output() deletedMovie = new EventEmitter<Movie>();
 
-
-
-  
-
   constructor(private apiService : ApiService){}
 
   ngOnInit() { }
@@ -33,11 +29,12 @@ export class MovieListComponent implements OnInit {
     this.editedMovie.emit(movie)
   }
   createMovie(){
-    this.editedMovie.emit()
+    this.newMovie.emit()
   }
+
   deleteMovie(movie:Movie){
-    console.log("Deleted : ",movie.title)
+    this.apiService.deleteMovie(movie.id).subscribe(
+    data => console.log("Deleted : ", data),
+    error => console.log(error))
   }
 }
-
-

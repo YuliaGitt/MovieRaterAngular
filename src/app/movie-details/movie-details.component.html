@@ -1,6 +1,6 @@
 <div *ngIf="movie">
     <h1>{{movie.title}}</h1>
-    <h1>{{movie.discription}}</h1>
+    <h1>{{movie.description}}</h1>
     <p>Avrage Rating : {{movie.avg_ratings}}<br>
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 0}" ></i>
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 1}" ></i>

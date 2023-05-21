@@ -10,7 +10,6 @@ import { Movie } from '../models/Movie';
 })
 
 
-
 export class MainComponent implements OnInit{
   movies :any  = [];
   selectedMovie = null;
@@ -27,20 +26,20 @@ export class MainComponent implements OnInit{
     )
   }
 
-  selectMovie(movie:any){
+  selectMovie(movie: Movie){
     this.selectedMovie = movie;
     this.editedMovie = null;
     console.log("Selected: ",this.selectedMovie)
   }
 
-  editMovie(movie:any){
+  editMovie(movie:Movie){
     this.editedMovie = movie;
     this.selectedMovie = null;
     console.log("Edited: ",this.editedMovie)
   }
   
-  newMovie(){
-    this.editedMovie = null;
+  newMovie() {
+    this.editedMovie = {title:'',discription:''};
     this.selectedMovie = null;
   }
 }

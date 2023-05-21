@@ -2,8 +2,10 @@
     <h1 (click)="movieClicked(movie)">
         {{movie.title}}
     </h1>
-<div class="iconSection" >
-    <i class="fas fa-edit" (click)="movieEdit(movie)"></i>
-    <i class="fas fa-trash" (click)="deleteMovie(movie)"></i>
-    <button (click)="createMovie()">Add a movie</button>
+    <div class="iconSection" >
+        <i class="fas fa-edit" (click)="movieEdit(movie)"></i>
+        <i class="fas fa-trash" (click)="deleteMovie(movie)"></i>
+    </div>
 </div>
+    <button (click)="createMovie()">Add a movie</button>
+
