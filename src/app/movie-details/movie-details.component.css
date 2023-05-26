@@ -1,7 +1,13 @@
 .orange{
-    color: orange;
+    color: rgb(218, 175, 17);
 }
 
 .purple{
     color: purple;
+}
+movieDetail{
+    .h1{
+        font-weight: bolder;
+        font-size: xx-large;
+    }
 }

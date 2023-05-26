@@ -1,11 +1,19 @@
-<p>movie : {{movie?.title}}</p>
-<form [formGroup]="movieForm" (ngSubmit)="saveForm()">
-    <label for="title">Title</label><br>
-    <input formControlName="title" type="text"><br>
-    <label for="description">Description</label><br>
-    <textarea formControlName="description" type="text"></textarea><br>
-    <button type="submit">
+<div>
+    <h1 *ngIf="!id">Add A Movie</h1>
+    <h1 *ngIf="id">Edit The Movie</h1>
+</div>
+
+<form  [formGroup]="movieForm" (ngSubmit)="saveForm()">
+    <label for="title" class="titleInputLabel">Title</label><br>
+    <input formControlName="title" type="text" class="input" (input)="onUserInput($event)"><br>
+    <label for="description" class="descriptionInputLabel">Description</label><br>
+    <textarea formControlName="description" type="text" class="input2"></textarea><br>
+<div class="container">
+    <div class="vertical-center">
+    <button type="submit" [disabled]="isDisabled">
         <span *ngIf="id">Update</span>
         <span *ngIf="!id">Create</span>
     </button>
+    </div>
+</div>
 </form>

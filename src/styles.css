@@ -5,3 +5,103 @@ body{
     margin: 0;
     padding: 0;
 }
+button{
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    background: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 12px 20px;
+    text-align:center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+
+}
+button:hover{
+    color: #000;
+    background: rgb(255, 218, 87);
+}
+
+.container {
+    height: 200px;
+    position: relative;
+
+  }
+  
+.vertical-center {
+    margin-left: 25px;
+    position: absolute;
+    top: 20%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+input{
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 50px;
+    line-height: normal;
+    color: #282828;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0 6px;
+    padding-left: 12px;
+}
+input :focus{
+    border: 3px solid #5551ff;
+}
+
+textarea{
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 50px;
+    line-height: normal;
+    color: #282828;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    user-select: auto;
+    font-size: 16px;
+    padding: 0 6px;
+    padding-left: 12px;
+  }
+textarea :focus{
+    border: 3px solid #5551ff;
+}
+.seven h1 {
+    text-align: center;
+        font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+    
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+    
+    .seven h1:after,.seven h1:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #000000;
+        border-top: 1px solid #000000;
+        height: 5px;
+      background-color:#b1ddf1;
+    }
+
+.app{
+    background-color:#b1ddf1;
+    height: calc(100vn - 100px);
+    padding: 50px;
+}
+
+

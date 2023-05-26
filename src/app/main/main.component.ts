@@ -11,7 +11,7 @@ import { Movie } from '../models/Movie';
 
 
 export class MainComponent implements OnInit{
-  movies :any  = [];
+  movies :Movie[]  = [];
   selectedMovie = null;
   editedMovie = null;
   
@@ -42,4 +42,24 @@ export class MainComponent implements OnInit{
     this.editedMovie = {title:'',discription:''};
     this.selectedMovie = null;
   }
+
+  deletedMovie(movie:Movie){
+    this.apiService.deleteMovie(movie.id).subscribe(
+      data => {
+       this.movies = this.movies.filter(mov => mov.id !== movie.id)
+      },
+      error => console.log(error)
+    )
+  }
+
+  movieCreated(movie:Movie){
+    this.movies.push(movie);
+  }
+  movieUpdated(movie:Movie){
+    const index = this.movies.findIndex(mov => mov.id === movie.id)
+    if (index >= 0){
+      this.movies[index]= movie 
+    }
+  }
 }
+

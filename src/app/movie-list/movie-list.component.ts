@@ -33,8 +33,5 @@ export class MovieListComponent implements OnInit {
   }
 
   deleteMovie(movie:Movie){
-    this.apiService.deleteMovie(movie.id).subscribe(
-    data => console.log("Deleted : ", data),
-    error => console.log(error))
-  }
+    this.deletedMovie.emit(movie)}
 }
