@@ -1,3 +1,4 @@
+<button (click)="logout()">logout</button>
 <div class="layout">
     <app-movie-list [movies]="movies" (selectMovie)="selectMovie($event)" (deletedMovie)="deletedMovie($event)"
     (editedMovie)="editMovie($event)" (newMovie)="newMovie()"></app-movie-list>

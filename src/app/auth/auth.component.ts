@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { ApiService } from '../api.service';
-import { CookieService } from 'ngx-cookie-service/public-api';
+import { CookieService } from 'ngx-cookie-service';
 
 interface tokenObj{
   token : string
@@ -14,23 +15,31 @@ interface tokenObj{
   styleUrls: ['./auth.component.css'],
 })
 
-export class AuthComponent {
+export class AuthComponent implements OnInit{
 
-  constructor(private apiservice : ApiService,
-    private coockieService : CookieService){}
+  constructor(private apiService : ApiService,
+    private coockieService : CookieService,
+    private router : Router){};
 
-  loginForm = new FormGroup({
-    username : new FormControl(""),
-    password : new FormControl("")
-  })
+    authForm = new FormGroup({
+      username : new FormControl(''),
+      password : new FormControl('')
+    });
+      
+    ngOnInit(){
+      const mrToken = this.coockieService.get('mr-Token');
+      if (mrToken){
+        this.router.navigate([`/movies`]);
+      }
+    };
 
-  saveLoginForm(){
-    this.apiservice.loginUser(this.loginForm.value).subscribe(
+  saveAuthForm(){
+    this.apiService.loginUser(this.authForm.value).subscribe(
       (result: tokenObj) => {
-        this.coockieService.set("mr-token",result.token)
+        this.coockieService.set('mr-Token',result.token);
+        this.router.navigate([`/movies`]);
       },
-      error => console.log(error)
-      );
-   }
-  }
-
+      error => console.log("error:  ",error)
+    )
+  };
+};

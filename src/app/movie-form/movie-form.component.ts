@@ -1,6 +1,7 @@
 import { Component , Input, Output, EventEmitter} from '@angular/core';
-import { Movie } from '../models/Movie';
 import { FormControl, FormGroup } from '@angular/forms';
+
+import { Movie } from '../models/Movie';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class MovieFormComponent {
 
   @Input() set movie(val:Movie){
       this.id = val.id;
-      console.log(this.id)
+      console.log(this.id);
       this.movieForm = new FormGroup({
       title : new FormControl(val.title),
       description : new FormControl(val.description)
@@ -37,23 +38,23 @@ export class MovieFormComponent {
       this.movieForm.value.title,
       this.movieForm.value.description).subscribe(
         (resault : Movie) => {
-          this.movieUpdated.emit(resault)
+          this.movieUpdated.emit(resault);
         },
         error => console.log(error)
       )
-    console.log("Saved update", this.movieForm.value)
+    console.log("Saved update", this.movieForm.value);
   }
   else{
     this.apiService.createMovie(
       this.movieForm.value.title,
       this.movieForm.value.description).subscribe(
         (resault : Movie) => {
-          this.movieCreated.emit(resault)
+          this.movieCreated.emit(resault);
         },
         error => console.log(error)
       )
-    console.log("Saved new movie", this.movieForm.value)
-    this.movieForm.reset()
+    console.log("Saved new movie", this.movieForm.value);
+    this.movieForm.reset();
   }
 }
 
