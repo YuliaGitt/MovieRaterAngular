@@ -1,0 +1,59 @@
+[33mcommit db795023f14f2dc661d0862acaf5e538aeef039e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Tue May 30 14:15:39 2023 +0300
+
+    cheching git connection
+
+[33mcommit 1ff9565801925a4e1d8e0ffc1a4f1280d500efee[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Tue May 30 14:12:08 2023 +0300
+
+    login complete
+
+[33mcommit 8cad4e2aed193d601ded504ef014f257db29cb08[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Fri May 26 16:22:23 2023 +0300
+
+    cli update
+
+[33mcommit 16028679cdb5741ad4a7dfa0541b01e815007cdf[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Fri May 26 16:20:27 2023 +0300
+
+    updare package
+
+[33mcommit e46ef260e7b6b1a4ad949836779d15d7aecc1dbe[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Fri May 26 15:59:33 2023 +0300
+
+    Before update
+
+[33mcommit 55e30322ef514891820ad5e70a5077d88e78fd2c[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Sun May 21 16:51:20 2023 +0300
+
+    POST, GET DELETE
+
+[33mcommit 60ba4658b1d4942371ca530b25ec1df074d6ea92[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Sat May 13 23:17:39 2023 +0300
+
+    CRUD events
+
+[33mcommit 4932d428353fb3207af6ab19a63eeb72409cd969[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Sat May 13 19:54:20 2023 +0300
+
+    Model Movie
+
+[33mcommit b29da5d9c85f84ec5361d99faf54ab6efdab68fc[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Thu May 11 20:44:29 2023 +0300
+
+    stars add
+
+[33mcommit fc1dcb423c95ca72fdb820ce5c36c496f9715932[m
+Author: John Doe <yuliagub@gmail.com>
+Date:   Mon May 8 11:12:29 2023 +0300
+
+    commit message
