@@ -13,7 +13,8 @@ export class ApiService {
 baseurl = 'http://127.0.0.1:8000/';
 baseMovieurl = `${this.baseurl}api/movies/`;
 headers = new HttpHeaders({
-  'Content-Type' : 'application/json'
+  'Content-Type' : 'application/json',
+  //'Authorization' : 'token 56ea183db519b7cc139b7476425a7de3fec65af3'
 })
 
   constructor(private httpClient : HttpClient,
@@ -49,6 +50,11 @@ headers = new HttpHeaders({
   loginUser(authData){
     const body = JSON.stringify(authData);
     return this.httpClient.post(`${this.baseurl}auth/`,body, {headers : this.headers});
+  }
+
+  registerUser(authData){
+    const body = JSON.stringify(authData);
+    return this.httpClient.post(`${this.baseurl}api/user/`,body, {headers : this.headers});
   }
 
   getAuthHeaders() {

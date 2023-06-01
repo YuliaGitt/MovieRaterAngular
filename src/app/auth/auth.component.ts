@@ -26,6 +26,8 @@ export class AuthComponent implements OnInit{
       password : new FormControl('')
     });
       
+    registerMode = false;
+
     ngOnInit(){
       const mrToken = this.coockieService.get('mr-Token');
       if (mrToken){
@@ -34,12 +36,20 @@ export class AuthComponent implements OnInit{
     };
 
   saveAuthForm(){
-    this.apiService.loginUser(this.authForm.value).subscribe(
-      (result: tokenObj) => {
-        this.coockieService.set('mr-Token',result.token);
-        this.router.navigate([`/movies`]);
-      },
-      error => console.log("error:  ",error)
-    )
+    if (!this.registerMode){
+      this.apiService.loginUser(this.authForm.value).subscribe(
+        (result: tokenObj)=> {
+          this.coockieService.set('mr-Token',result.token);
+          this.router.navigate([`/movies`]);
+        },
+        error => console.log("error:  ",error)
+      )
+    } else {
+      this.apiService.registerUser(this.authForm.value).subscribe(
+        result => console.log(this.registerMode),
+        error => console.log("error:  ",error)
+      )
+    }
+    
   };
 };

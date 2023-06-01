@@ -1,4 +1,5 @@
-<h1>Login</h1>
+<h1 *ngIf="!registerMode">Login</h1>
+<h1 *ngIf="registerMode">Register</h1>
 <form  [formGroup]="authForm" (ngSubmit)="saveAuthForm()">
     <label >User Name</label><br>
     <input formControlName="username" type="text"/><br>
@@ -8,9 +9,10 @@
 
     <div class="container">
         <div class="vertical-center">
-            <button type="submit">Login</button>
+            <button *ngIf="!registerMode"  type="submit">Login</button>
+            <button *ngIf="registerMode"  type="submit">Register</button>
         </div>
     </div>
 </form>
-<span>Don't have an account? Register Hereee</span>
-
+<span *ngIf="!registerMode" (click)="registerMode = true">Don't have an account? Register Here</span>
+<span *ngIf="registerMode" (click)="registerMode = false">Don't have an account? Login Here</span>
