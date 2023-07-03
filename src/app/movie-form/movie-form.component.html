@@ -5,9 +5,9 @@
 
 <form  [formGroup]="movieForm" (ngSubmit)="saveForm()">
     <label for="title" class="titleInputLabel">Title</label><br>
-    <input formControlName="title" type="text" class="input" (input)="onUserInput($event)"><br>
+    <input formControlName="title" type="text" class="input" (input)="onUserInput($event)"><br><br>
     <label for="description" class="descriptionInputLabel">Description</label><br>
-    <textarea formControlName="description" type="text" class="input2"></textarea><br>
+    <textarea formControlName="description" type="text" class="input"></textarea><br>
 <div class="container">
     <div class="vertical-center">
     <button type="submit" [disabled]="isDisabled">

@@ -3,7 +3,7 @@
     <h1>{{movie.title}}</h1>
     <h2>{{movie.description}}</h2>
     
-    <h3> Avrage Rating : {{movie.avg_ratings}}<br></h3>
+    <h3> Avrage Rating : {{(movie.avg_ratings)}}<br></h3>
     <p></p>
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 0}" ></i>
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 1}" ></i>

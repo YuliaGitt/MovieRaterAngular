@@ -2,14 +2,15 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 body{
-    margin: 0;
-    padding: 0;
+    margin: 20;
+    padding: 5px 10px;
 }
+
 button{
     display: inline-block;
     outline: 0;
     cursor: pointer;
-    border: 2px solid #000;
+    border: 2px solid #ffffff;
     border-radius: 3px;
     color: #fff;
     background: #000;
@@ -25,7 +26,7 @@ button{
 }
 button:hover{
     color: #000;
-    background: rgb(255, 218, 87);
+    background: #ffa500;
 }
 
 .container {
@@ -35,51 +36,38 @@ button:hover{
   }
   
 .vertical-center {
-    margin-left: 25px;
     position: absolute;
     top: 20%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
-input{
-    border: 3px solid #000;
-    border-radius: 5px;
-    height: 50px;
-    line-height: normal;
-    color: #282828;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0 6px;
-    padding-left: 12px;
-}
-input :focus{
-    border: 3px solid #5551ff;
+body{
+    background-color: #282c34;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    }
+
+input {
+    width: 600px;
+    height: 30px;
+    background-color: #b1ddf1;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 textarea{
-    border: 3px solid #000;
-    border-radius: 5px;
-    height: 50px;
-    line-height: normal;
-    color: #282828;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0 6px;
-    padding-left: 12px;
-  }
-textarea :focus{
-    border: 3px solid #5551ff;
+    width: 600px;
+    height: 80px;
+    background-color: #b1ddf1;
+    font-weight: bolder;
+    font-size: 20px;
 }
+    
 .seven h1 {
     text-align: center;
-        font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+        font-size:80px; font-weight:300; color:#ffa500; letter-spacing:1px;
         text-transform: uppercase;
     
         display: grid;
@@ -92,16 +80,8 @@ textarea :focus{
     .seven h1:after,.seven h1:before {
         content: " ";
         display: block;
-        border-bottom: 1px solid #000000;
-        border-top: 1px solid #000000;
-        height: 5px;
-      background-color:#b1ddf1;
+        border-bottom: 1px solid #ffa500;
+        border-top: 2px solid #ffa500;
+        height: 8px;
+      background-color:#282c34;
     }
-
-.app{
-    background-color:#b1ddf1;
-    height: calc(100vn - 100px);
-    padding: 50px;
-}
-
-

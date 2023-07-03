@@ -14,7 +14,7 @@ baseurl = 'http://127.0.0.1:8000/';
 baseMovieurl = `${this.baseurl}api/movies/`;
 headers = new HttpHeaders({
   'Content-Type' : 'application/json',
-  //'Authorization' : 'token 56ea183db519b7cc139b7476425a7de3fec65af3'
+  'Authorization' : 'token 56ea183db519b7cc139b7476425a7de3fec65af3'
 })
 
   constructor(private httpClient : HttpClient,
@@ -58,6 +58,7 @@ headers = new HttpHeaders({
   }
 
   getAuthHeaders() {
+    //const token = '56ea183db519b7cc139b7476425a7de3fec65af3';
     const token = this.cookieServise.get('mr-Token');
     return new HttpHeaders({
       'Content-Type' : 'application/json',
