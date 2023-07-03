@@ -1,12 +1,18 @@
 <div class="app">
+    <div class="seven">
+        <h1 >Movie Rater</h1>
+    </div>
+    <button (click)="logout()">logout</button>
+
 <div class="layout">
+    
     <app-movie-list [movies]="movies" (selectMovie)="selectMovie($event)" (deletedMovie)="deletedMovie($event)"
     (editedMovie)="editMovie($event)" (newMovie)="newMovie()"></app-movie-list>
     <div>
-        <button (click)="logout()">logout</button>
+        
         <app-movie-details [movie]="selectedMovie" (updateMovie)="selectMovie($event)"></app-movie-details>
+       
         <app-movie-form *ngIf="editedMovie" [movie]="this.editedMovie" (movieCreated)="movieCreated($event)" (movieUpdated)="movieUpdated($event)" ></app-movie-form>
-   
     </div>
 
 </div>

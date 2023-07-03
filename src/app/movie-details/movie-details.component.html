@@ -1,20 +1,20 @@
-
-<div *ngIf="movie" class="movieDetails">
+<div *ngIf="movie" class="movieDetails" class="detail-container">
     <h1>{{movie.title}}</h1>
     <h2>{{movie.description}}</h2>
     
-    <h3> Avrage Rating : {{(movie.avg_ratings)}}<br></h3>
-    <p></p>
+    <h2> Avrage Rating : 
+ 
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 0}" ></i>
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 1}" ></i>
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 2}" ></i>
     <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 3}" ></i>
-    <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 4}" ></i><br>
-    Number Of Rarings {{movie.num_ratings}}<br>
+    <i class="fas fa-star" [ngClass]="{'orange' : movie.avg_ratings > 4}" ></i>
+    ({{movie.num_ratings}})
+</h2>
     <h1>Rate The Movie:</h1>
-    <i class="fas fa-star" [ngClass]="{'purple' : rateEnterNum >= rate} "
+    <h1 class="fas fa-star" [ngClass]="{'purple' : rateEnterNum >= rate} "
         *ngFor="let rate of [1,2,3,4,5]" (mouseenter)="rateEnter(rate)"
         (click)="rateClick(rate)"
-        (mouseleave)="rateEnterNum = 0"></i>
+        (mouseleave)="rateEnterNum = 0"></h1>
     
 </div>

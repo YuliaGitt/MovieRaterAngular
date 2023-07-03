@@ -1,7 +1,10 @@
 <div *ngFor = "let movie of movies"  class="movieTitleSection">
+    
     <h1 (click)="movieClicked(movie)">
+        <div class="fas fa-film" ></div>
         {{movie.title}}
     </h1>
+    
     <div >
         <i class="fas fa-edit" (click)="movieEdit(movie)"></i>
         <i class="fas fa-trash" (click)="deleteMovie(movie)"></i>

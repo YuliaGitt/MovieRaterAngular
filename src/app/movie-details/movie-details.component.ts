@@ -18,7 +18,6 @@ export class MovieDetailsComponent {
   @Output() updateMovie = new EventEmitter();
   rateEnterNum = 0 ;
 
-  
 
   rateEnter(rate:number){
     this.rateEnterNum = rate

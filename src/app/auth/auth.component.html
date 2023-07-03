@@ -1,12 +1,15 @@
-<div class="app">
-<h1 *ngIf="!registerMode">Login</h1>
-<h1 *ngIf="registerMode">Register</h1>
-<form  [formGroup]="authForm" (ngSubmit)="saveAuthForm()">
-    <label class="in">User Name</label><br>
-    <input formControlName="username" type="text" class="input"/><br>
-    <br>
-    <label>Password</label><br>
-    <input formControlName="password" type="password" class="input"/><br>
+
+<div class="image-container">
+      <img src="../assets/MR_logo.png" alt="Your Photo" width="1100px">
+    </div>
+<div class="app"></div>
+    <form  [formGroup]="authForm" (ngSubmit)="saveAuthForm()" class="form-container">
+        <h1 *ngIf="!registerMode">Login</h1>
+        <h1 *ngIf="registerMode">Register</h1>
+        <label class="in">User Name</label><br>
+        <input formControlName="username" type="text" class="input"/><br>
+        <br><label>Password</label><br>
+        <input formControlName="password" type="password" class="input"/><br>
 
     <div class="container">
         <div class="vertical-center">
@@ -18,5 +21,4 @@
 </form>
 <span *ngIf="!registerMode" (click)="registerMode = true">Don't have an account? Register Here</span>
 <span *ngIf="registerMode" (click)="registerMode = false">Don't have an account? Login Here</span>
-</div>
-<img src="../assets/MR_logo.png" alt="Your Photo">
+

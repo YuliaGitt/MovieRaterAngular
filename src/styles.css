@@ -2,7 +2,6 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 body{
-    margin: 20;
     padding: 5px 10px;
 }
 
@@ -10,7 +9,7 @@ button{
     display: inline-block;
     outline: 0;
     cursor: pointer;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     border-radius: 3px;
     color: #fff;
     background: #000;
@@ -47,20 +46,25 @@ body{
     color: white;
     font-size: 25px;
     font-weight: 700;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
     }
 
 input {
     width: 600px;
     height: 30px;
-    background-color: #b1ddf1;
+    background-color: #c4e1ee;
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 10px;
+
 }
 
 textarea{
     width: 600px;
     height: 80px;
-    background-color: #b1ddf1;
+    background-color: #c4e1ee;
     font-weight: bolder;
     font-size: 20px;
 }
@@ -84,4 +88,18 @@ textarea{
         border-top: 2px solid #ffa500;
         height: 8px;
       background-color:#282c34;
+      ;
     }
+
+.image-container {
+    height:300px ;
+    }
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.detail-container {
+    margin-left: 25px;
+}
